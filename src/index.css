@@ -1,13 +1,74 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap");
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: "Source Serif Pro", sans-serif;
+  letter-spacing: 1.25px;
 }
+
+main {
+  display: block;
+  background-image: url("https://picsum.photos/1920/1080");
+  background-position: bottom;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.button {
+  place-items: center;
+  cursor: pointer;
+  font-size: 30px;
+  color: #fafafa;
+  background-image: -webkit-gradient(linear, left top, right top, from(#434343), color-stop(#000000), to(#434343));
+  background-image: linear-gradient(to right, #434343, #000000, #434343);
+  opacity: 80%;
+  margin: 5vh 0;
+  margin-left: 38vw;
+  padding: 10px;
+  text-align: center;
+  border: none;
+  border-radius: 15px;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.button:hover {
+  background-color: rgba(0, 0, 0, 0.39);
+}
+
+.button:focus {
+  outline: none;
+}
+
+.text {
+  padding-top: 15rem;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 40px;
+  font-weight: 600;
+  font-style: italic;
+  color: #fafafa;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.author {
+  font-size: 30px;
+  font-weight: 500;
+  color: #fafafa;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  .button {
+    margin: 10vh;
+  }
+}
+/*# sourceMappingURL=index.css.map */

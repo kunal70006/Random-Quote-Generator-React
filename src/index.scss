@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Source Serif Pro", sans-serif;
+  letter-spacing: 1.25px;
+}
+
+main {
+  display: block;
+  //background-image: url("./assets/riccardo-pelati-omwQmD0-N6c-unsplash.jpg");
+  background-image: url("https://picsum.photos/1920/1080");
+  background-position: bottom;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.button {
+  place-items: center;
+  cursor: pointer;
+  font-size: 30px;
+  color: rgb(250, 250, 250);
+  //background-color: rgba(0, 0, 0, 0.233);
+  background-image: linear-gradient(to right, #434343, #000000, #434343);
+  opacity: 80%;
+  margin: 5vh 0;
+  margin-left: 38vw;
+  padding: 10px;
+  text-align: center;
+
+  border: none;
+  border-radius: 15px;
+
+  transition: 0.3s ease;
+}
+
+.button:hover {
+  background-color: rgba(0, 0, 0, 0.39);
+}
+
+.button:focus {
+  outline: none;
+}
+
+.text {
+  padding-top: 15rem;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 40px;
+  font-weight: 600;
+  font-style: italic;
+  color: rgb(250, 250, 250);
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.author {
+  font-size: 30px;
+  font-weight: 500;
+  color: rgb(250, 250, 250);
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  .button {
+    margin: 10vh;
+  }
+}

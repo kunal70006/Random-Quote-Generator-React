@@ -1,26 +1,45 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
 
-function App() {
+const App = () => {
+  var [quote, setQuotes] = useState([{}]);
+  useEffect(() => {
+    getQuotes();
+  }, []);
+
+  const getQuotes = async (e) => {
+    const data = await fetch("https://type.fit/api/quotes");
+    const response = await data.json();
+    console.log(response);
+    setQuotes(response);
+  };
+
+  function randQuote() {
+    let tempQuote = Math.floor(Math.random() * quote.length);
+    return tempQuote;
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+      <main>
+        <div className="text">"{quote[randQuote()].text}"</div>
+        <div className="author">
+          ~
+          {quote[randQuote()].author != null
+            ? quote[randQuote()].author
+            : "Unknown"}
+        </div>
+        <br />
+        <button
+          className="button"
+          onClick={(e) => {
+            getQuotes();
+          }}
         >
-          Learn React
-        </a>
-      </header>
+          Press here to get a random quote
+        </button>
+      </main>
     </div>
   );
-}
+};
 
 export default App;
