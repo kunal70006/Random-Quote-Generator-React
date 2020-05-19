@@ -12,7 +12,13 @@ body {
 }
 
 main {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   background-image: url("https://picsum.photos/1920/1080");
   background-position: bottom;
   background-size: cover;
@@ -20,25 +26,21 @@ main {
 }
 
 .button {
-  place-items: center;
+  display: block;
+  width: inherit;
+  margin: 20px auto;
+  margin-bottom: 0;
   cursor: pointer;
-  font-size: 30px;
-  color: #fafafa;
-  background-image: -webkit-gradient(linear, left top, right top, from(#434343), color-stop(#000000), to(#434343));
-  background-image: linear-gradient(to right, #434343, #000000, #434343);
-  opacity: 80%;
-  margin: 5vh 0;
-  margin-left: 38vw;
-  padding: 10px;
-  text-align: center;
-  border: none;
-  border-radius: 15px;
-  -webkit-transition: 0.3s ease;
-  transition: 0.3s ease;
+  border: 2px solid #2e2e2e;
+  border-radius: 10px;
+  padding: 6px 8px;
+  color: #2e2e2e;
+  background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  font-size: 25px;
 }
 
 .button:hover {
-  background-color: rgba(0, 0, 0, 0.39);
+  background-image: linear-gradient(135deg, #d9dbdd 0%, #a9b4c5 100%);
 }
 
 .button:focus {
@@ -64,11 +66,5 @@ main {
   text-align: center;
   padding: 10px;
   margin-bottom: 10px;
-}
-
-@media only screen and (max-width: 600px) {
-  .button {
-    margin: 10vh;
-  }
 }
 /*# sourceMappingURL=index.css.map */

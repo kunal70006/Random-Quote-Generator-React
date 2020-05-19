@@ -9,7 +9,6 @@ const App = () => {
   const getQuotes = async (e) => {
     const data = await fetch("https://type.fit/api/quotes");
     const response = await data.json();
-    console.log(response);
     setQuotes(response);
   };
 
