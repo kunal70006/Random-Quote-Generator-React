@@ -1,1 +1,1 @@
-## A randome Quote Generator static website made with React
+## A Random Quote Generator static website made with React
